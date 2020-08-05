@@ -85,7 +85,15 @@ interface UpdateZoom {
     }
 }
 
-export type GeneralActionTypes = UpdateProjectData
+interface UpdateFirstLabelCreatedFlag {
+    type: typeof Action.UPDATE_FIRST_LABEL_CREATED_FLAG,
+    payload: {
+        firstLabelCreatedFlag: Boolean;
+    }
+}
+
+export type GeneralActionTypes = UpdateFirstLabelCreatedFlag 
+    | UpdateProjectData
     | UpdateWindowSize
     | UpdateActivePopupType
     | UpdateCustomCursorStyle

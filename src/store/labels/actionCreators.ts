@@ -1,6 +1,7 @@
 import {LabelsActionTypes, ImageData, LabelName} from "./types";
 import {Action} from "../Actions";
 import {LabelType} from "../../data/enums/LabelType";
+import { GeneralActionTypes } from '../general/types';
 
 export function updateActiveImageIndex(activeImageIndex: number): LabelsActionTypes {
     return {
@@ -84,7 +85,7 @@ export function updateLabelNames(labels: LabelName[]) {
     }
 }
 
-export function updateFirstLabelCreatedFlag(firstLabelCreatedFlag: boolean) {
+export function updateFirstLabelCreatedFlag(firstLabelCreatedFlag: boolean): GeneralActionTypes {
     return {
         type: Action.UPDATE_FIRST_LABEL_CREATED_FLAG,
         payload: {
